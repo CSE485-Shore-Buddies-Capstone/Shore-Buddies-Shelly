@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject subject;
-    public float timeBetween = 3f;
-    public float timeTillNext = 3f;
+    public List<GameObject> subjects;
+    public float[] timeBetweenRange = new float[2];
+    public float timeTillNext = 1f;
     
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,9 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         if(timeTillNext <= 0) {
-            Instantiate(subject, transform.parent, true);
-            timeTillNext = timeBetween;
+            int rand_index = Random.Range(0, subjects.Count);
+            Instantiate(subjects[rand_index], this.transform.position, this.transform.rotation);
+            timeTillNext = Random.Range(timeBetweenRange[0], timeBetweenRange[1]);
         }
         timeTillNext -= Time.deltaTime;
     }
