@@ -7,12 +7,13 @@ public class Spawner : MonoBehaviour
     public List<GameObject> subjects;
     public float[] timeBetweenRange = new float[2];
     public float timeTillNext = 1f;
-    public Camera mainCamera;
-
+    
+    private Camera mainCamera;
     private Vector3 pointTopLeft;
     private Vector3 pointTopRight;
 
     void Start() {
+        mainCamera = Camera.main;
         pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
         pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
     }
