@@ -5258,6 +5258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4939434173658710665, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 724775231}
     - target: {fileID: 4939434173658710666, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
       propertyPath: m_Name
       value: TrashSpawner
