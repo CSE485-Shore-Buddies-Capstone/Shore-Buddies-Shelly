@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour
+public static class SceneLoader
 {
     // public enum Scene{
     //     CatchingGame, Home
@@ -13,7 +13,7 @@ public class SceneLoader : MonoBehaviour
     // }
 
     //will temporarily take in string scene (move onto enum later)
-    public void Load(string scene){
+    public static void Load(string scene){
         SceneManager.LoadScene(scene);
     }
 }
