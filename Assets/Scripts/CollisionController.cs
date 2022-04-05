@@ -22,9 +22,14 @@ public class CollisionController : MonoBehaviour
         if(collision.tag == "Player")
         {
             GM.addPoints(1);
-        }else if(collision.tag == "Ground")
+        }else if(collision.tag == "TrashMissedZone")
         {
+            Debug.Log("lskdjflsdkjf");
             GM.removeLives(1);
+        }
+        else
+        {
+            Debug.Log(collision.tag);
         }
 
         Destroy(gameObject);

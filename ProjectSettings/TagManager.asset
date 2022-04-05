@@ -8,6 +8,7 @@ TagManager:
   - Points
   - Lives
   - Trash
+  - TrashMissedZone
   layers:
   - Default
   - TransparentFX

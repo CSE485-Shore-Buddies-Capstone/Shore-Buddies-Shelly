@@ -31,5 +31,18 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
         pointsObject.GetComponent<TMP_Text>().SetText("Points: " + GM.getPoints().ToString());
+        ManageLives(GM.getLives());
+    }
+
+    private void ManageLives(int lives)
+    {
+        foreach(Transform life_tf in livesObject.transform)
+        {
+            if (int.Parse(life_tf.name) >= lives)
+            {
+                life_tf.gameObject.SetActive(false);
+                
+            }
+        }
     }
 }

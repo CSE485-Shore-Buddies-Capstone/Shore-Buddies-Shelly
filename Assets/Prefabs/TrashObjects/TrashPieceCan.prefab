@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 3
-  fallAcceleration: 0
+  fallAcceleration: 0.1
 --- !u!114 &8043610597230030478
 MonoBehaviour:
   m_ObjectHideFlags: 0
