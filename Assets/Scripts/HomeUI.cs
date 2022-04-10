@@ -26,6 +26,6 @@ public class HomeUI : MonoBehaviour
         // bubbleEffect.SetActive(true);
         transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(transitionTime);
-        SceneLoader.Load("Menu");
+        SceneLoader.Load("CatchingGame");
     }
 }
