@@ -9,11 +9,14 @@ public class movement : MonoBehaviour
   private Camera mainCamera;
   private Vector3 pointTopLeft;
   private Vector3 pointTopRight;
+  private AutoScaler autoScalerScript;
 
   void Start() {
-      mainCamera = Camera.main;
-      pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
-      pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
+    autoScalerScript = gameObject.GetComponent<AutoScaler>();
+    speed *= autoScalerScript.getScaler(1f);
+    mainCamera = Camera.main;
+    pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
+    pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
   }
   
   // Update is called once per frame

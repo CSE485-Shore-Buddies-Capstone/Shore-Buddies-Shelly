@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2839096598287056667}
   - component: {fileID: 8043610597230030478}
   - component: {fileID: -1006027786738698244}
+  - component: {fileID: 6447367197885312727}
   m_Layer: 0
   m_Name: TrashPieceCan
   m_TagString: Trash
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb7750a0e33db949ac278cc112997b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6447367197885312727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ca7c6d687791e4eaf4bcddfa20de68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subjectRatio: 0.25

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("YOU HAVE DIED");
 
         //going to menu now, change later to bring up game over menu
-        SceneLoader.Load("Menu");
+        SceneLoader.Load("SampleHome");
     }
 
     //GETTERS AND SETTERS

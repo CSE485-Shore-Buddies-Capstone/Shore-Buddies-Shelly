@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -998,7 +998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.022216797, y: -0.010192871}
+  m_AnchoredPosition: {x: 0.022216797, y: -0.010253906}
   m_SizeDelta: {x: 808.514, y: 720.00397}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335682303
@@ -1482,6 +1482,7 @@ GameObject:
   - component: {fileID: 591727824}
   - component: {fileID: 591727823}
   - component: {fileID: 591727825}
+  - component: {fileID: 591727826}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -1614,6 +1615,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.504808, y: 9.126381}
   m_EdgeRadius: 0
+--- !u!114 &591727826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591727820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ca7c6d687791e4eaf4bcddfa20de68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subjectRatio: 0.25
 --- !u!1 &602212224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,7 +3896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 6, y: 63.67}
+  m_AnchoredPosition: {x: 6, y: 63.670013}
   m_SizeDelta: {x: 128.19, y: 49.97}
   m_Pivot: {x: 0.5000001, y: 0.5}
 --- !u!114 &1107870622
@@ -5120,7 +5134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 5.999999, y: 64.89}
+  m_AnchoredPosition: {x: 5.999999, y: 64.889984}
   m_SizeDelta: {x: 128.19, y: 52.41}
   m_Pivot: {x: 0.5000001, y: 0.5}
 --- !u!114 &1442221769
@@ -6059,7 +6073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.3999634, y: -10.439911}
+  m_AnchoredPosition: {x: -1.3999023, y: -10.439911}
   m_SizeDelta: {x: 80.61, y: 108.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628502581
@@ -6190,7 +6204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -14.000092, y: 24}
+  m_AnchoredPosition: {x: -14.000122, y: 24}
   m_SizeDelta: {x: -528, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648932561
@@ -6326,7 +6340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.022216797, y: -0.010192871}
+  m_AnchoredPosition: {x: 0.022216797, y: -0.010253906}
   m_SizeDelta: {x: 808.514, y: 720.00397}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656530196
@@ -7585,6 +7599,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 724775231}
+    - target: {fileID: 4939434173658710665, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
+      propertyPath: widthPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4939434173658710666, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
       propertyPath: m_Name
       value: TrashSpawner
