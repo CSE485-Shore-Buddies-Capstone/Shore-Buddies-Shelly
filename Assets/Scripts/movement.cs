@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
 
   void Start() {
     autoScalerScript = gameObject.GetComponent<AutoScaler>();
-    speed *= autoScalerScript.getScaler(1f);
+    speed *= autoScalerScript.getScaler(1f, (float)(Camera.main.orthographicSize * 2.0 * Screen.width / Screen.height));
     mainCamera = Camera.main;
     pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
     pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
