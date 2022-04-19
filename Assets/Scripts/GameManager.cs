@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddLives(int numberOfLives){
-        lives += numberOfLives;
+        if(lives < 5)
+            lives += numberOfLives;
         UI_Manager.UpdateUI();
     }
 

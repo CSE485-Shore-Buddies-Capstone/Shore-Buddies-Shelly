@@ -32,7 +32,6 @@ public class UIManager : MonoBehaviour
     {
         pointsObject.GetComponent<TMP_Text>().SetText("Points: " + GM.getPoints().ToString());
         ManageLives(GM.getLives());
-        Debug.Log("num of lives: " + GM.getLives());
     }
 
     private void ManageLives(int lives)
@@ -41,8 +40,10 @@ public class UIManager : MonoBehaviour
         {
             if (int.Parse(life_tf.name) >= lives)
             {
-                life_tf.gameObject.SetActive(false);
-                
+                life_tf.gameObject.SetActive(false); 
+            }
+            else if(int.Parse(life_tf.name) <= lives){
+                life_tf.gameObject.SetActive(true);
             }
         }
     }
