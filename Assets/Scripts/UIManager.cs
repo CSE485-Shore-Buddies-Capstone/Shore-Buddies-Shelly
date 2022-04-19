@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
     {
         pointsObject.GetComponent<TMP_Text>().SetText("Points: " + GM.getPoints().ToString());
         ManageLives(GM.getLives());
+        Debug.Log("num of lives: " + GM.getLives());
     }
 
     private void ManageLives(int lives)

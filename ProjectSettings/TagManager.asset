@@ -9,6 +9,7 @@ TagManager:
   - Lives
   - Trash
   - TrashMissedZone
+  - Star
   layers:
   - Default
   - TransparentFX

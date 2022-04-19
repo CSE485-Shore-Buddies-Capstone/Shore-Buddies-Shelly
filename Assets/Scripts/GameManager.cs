@@ -45,6 +45,11 @@ public class GameManager : MonoBehaviour
         UI_Manager.UpdateUI();
     }
 
+    public void AddLives(int numberOfLives){
+        lives += numberOfLives;
+        UI_Manager.UpdateUI();
+    }
+
     public int getLives()
     {
         return lives;

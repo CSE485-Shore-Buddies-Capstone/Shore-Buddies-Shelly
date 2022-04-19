@@ -21,11 +21,19 @@ public class CollisionController : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            GM.addPoints(1);
+            if(this.tag == "Star"){
+                GM.AddLives(1);
+            }else{
+                GM.addPoints(1);
+            }
         }else if(collision.tag == "TrashMissedZone")
         {
             Debug.Log("lskdjflsdkjf");
-            GM.removeLives(1);
+            if(this.tag == "Star"){
+                //do nothing
+            }else{
+                GM.removeLives(1);
+            }
         }
         else
         {

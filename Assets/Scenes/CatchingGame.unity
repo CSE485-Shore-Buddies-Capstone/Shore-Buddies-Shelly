@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7603,6 +7603,14 @@ PrefabInstance:
       propertyPath: widthPercent
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4939434173658710665, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
+      propertyPath: subjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939434173658710665, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
+      propertyPath: subjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 2232312562357163743, guid: 8cb2beb22c5b8a7499ab491ae3e81aeb, type: 3}
     - target: {fileID: 4939434173658710666, guid: 8f4f75b6d4c0a8847bd2ca55e960901e, type: 3}
       propertyPath: m_Name
       value: TrashSpawner
