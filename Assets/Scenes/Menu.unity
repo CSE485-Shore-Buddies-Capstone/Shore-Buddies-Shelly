@@ -2363,7 +2363,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562844207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: SetFullscreen
         m_Mode: 0
@@ -2489,9 +2489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1562844202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f66b0283ce68947f184fdd0624295a3c, type: 3}
+  m_Script: {fileID: 11500000, guid: f262a48fd87acc140a89c7ddab57a3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: b21c80105f9e7b64ea3e9a0a2e28e1fe, type: 2}
 --- !u!1 &1651983347
 GameObject:
   m_ObjectHideFlags: 0
