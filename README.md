@@ -1,5 +1,5 @@
 # Shore-Buddies-Shelly
-CSE485 capstone group project
+CSE485/486 capstone group project
 
 ### Setup
 
