@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2839096598287056666}
   - component: {fileID: 2839096598287056661}
   - component: {fileID: 2839096598287056664}
-  - component: {fileID: 2839096598287056667}
   - component: {fileID: 8043610597230030478}
   - component: {fileID: 5745752822183676526}
   - component: {fileID: 6377771467987386971}
+  - component: {fileID: 3680737861363714716}
   m_Layer: 0
   m_Name: TrashPieceFlipFlop
   m_TagString: Trash
@@ -113,20 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.922378, y: 3.4513493}
   m_EdgeRadius: 0
---- !u!114 &2839096598287056667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839096598287056660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36825e991d05aae419c606489801e538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 3
-  fallAcceleration: 0.1
 --- !u!114 &8043610597230030478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subjectRatio: 0.25
+--- !u!114 &3680737861363714716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2da5a52ee7b8047a7067cff95c0526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  acceleration: 0
+  direction: {x: 1, y: 0, z: 0}

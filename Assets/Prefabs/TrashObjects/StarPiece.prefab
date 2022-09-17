@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2232312562357163729}
   - component: {fileID: 2232312562357163742}
   - component: {fileID: 2232312562357163731}
-  - component: {fileID: 2232312562357163728}
   - component: {fileID: 6213874683996866373}
   - component: {fileID: 898915215092654638}
   - component: {fileID: 2754420772826523680}
+  - component: {fileID: -2396551915369238257}
   m_Layer: 0
   m_Name: StarPiece
   m_TagString: Star
@@ -115,20 +115,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.137785, y: 15.166544}
   m_EdgeRadius: 0
---- !u!114 &2232312562357163728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232312562357163743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36825e991d05aae419c606489801e538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 3
-  fallAcceleration: 0.1
 --- !u!114 &6213874683996866373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +153,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subjectRatio: 0.1
+--- !u!114 &-2396551915369238257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232312562357163743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2da5a52ee7b8047a7067cff95c0526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  acceleration: 0
+  direction: {x: 1, y: 0, z: 0}
 --- !u!1 &4475560637716694435
 GameObject:
   m_ObjectHideFlags: 0
