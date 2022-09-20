@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeleteTimer : MonoBehaviour
 {
-    public float deleteTimer = 3f;
+    public float deleteTimer = 10f;
 
     // Update is called once per frame
     void Update()
