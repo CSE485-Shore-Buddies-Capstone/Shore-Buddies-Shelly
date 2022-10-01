@@ -58,6 +58,11 @@ public class LineController : MonoBehaviour
             casted = true;
     }
 
+    public void BringReelBack() {
+        casted = false;
+        locked = true;
+    }
+
     private void setLinePosition(float percentageThrough) {
         float percentedPoint = Mathf.Lerp(0, distance, percentageThrough);
         Vector3 pointAlongLine = (percentedPoint * Vector3.Normalize(destination.position-origin.position ))+origin.position;
