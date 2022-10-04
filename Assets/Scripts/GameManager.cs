@@ -1,67 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int points;
-    private int lives;
-
-    private UIManager UI_Manager;
+    public TMP_Text countdownText;
+    public UIManager ui;
+    private int points = 0;
+    private float currentTime = 0f, startingTime = 60f;
 
     void Start()
     {
-        UI_Manager = GetComponent<UIManager>();
-
-        points = 0;
-        lives = 5; // we'll figure out a system to take care init lives
-        UI_Manager.UpdateUI();
+        currentTime = startingTime;
+        ui.UpdateUI();
     }
-
-    void GAME_OVER()
-    {
-        Debug.Log("YOU HAVE DIED");
-
-        //going to menu now, change later to bring up game over menu
-        SceneLoader.Load("SampleHome");
-    }
-
-    //GETTERS AND SETTERS
     
-    public void addPoints(int numberOfPoints)
+    // Update is called once per frame
+    void Update()
     {
-        points += numberOfPoints;
-        UI_Manager.UpdateUI();
+        currentTime -= 1 * Time.deltaTime;
+        countdownText.text = currentTime.ToString("0");
+
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+        }
+
+        if (currentTime <= 10)
+        {
+            countdownText.color = Color.red;
+        }
+    }
+
+    public void GAME_OVER()
+    {
+        Debug.Log("You lose the game!");
+        SceneLoader.Load("Home");
+    }
+
+    public void addPoints(int pointsAdd)
+    {
+        points += pointsAdd;
+        ui.UpdateUI();
     }
 
     public int getPoints()
     {
         return points;
-    }
-
-    public void removeLives(int numberOfLives)
-    {
-        lives -= numberOfLives;
-        UI_Manager.UpdateUI();
-    }
-
-    public void AddLives(int numberOfLives){
-        if(lives < 5)
-            lives += numberOfLives;
-        UI_Manager.UpdateUI();
-    }
-
-    public int getLives()
-    {
-        return lives;
-    }
-
-    void Update()
-    {
-        //init game over sequence if player runs out of lives
-        if(lives <= 0)
-        {
-            GAME_OVER();
-        }
     }
 }
