@@ -1,52 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public TMP_Text countdownText;
     public UIManager ui;
-    private int points = 0;
-    private float currentTime = 0f, startingTime = 60f;
+
+    private float currentTime, startingTime = 60f;
+    private ObjectiveStatus objectiveStatus = new ObjectiveStatus() {
+        points = 0,
+    };
 
     void Start()
     {
         currentTime = startingTime;
-        ui.UpdateUI();
+        ui.UpdateObjectiveStatus(objectiveStatus);
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
-
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
-        }
-
-        if (currentTime <= 10)
-        {
-            countdownText.color = Color.red;
-        }
+        ui.UpdateTimer(currentTime);
     }
 
-    public void GAME_OVER()
+    public void GameOver()
     {
         Debug.Log("You lose the game!");
         SceneLoader.Load("Home");
     }
 
-    public void addPoints(int pointsAdd)
+    public void UpdatePointObjective(int pointsAdd)
     {
-        points += pointsAdd;
-        ui.UpdateUI();
-    }
-
-    public int getPoints()
-    {
-        return points;
+        objectiveStatus.points += pointsAdd;
+        ui.UpdateObjectiveStatus(objectiveStatus);
     }
 }

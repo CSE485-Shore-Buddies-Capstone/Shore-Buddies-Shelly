@@ -4,14 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public struct ObjectiveStatus {
+    public int points;
+}
+
 public class UIManager : MonoBehaviour
 {
-    public GameManager gm;
-    public GameObject pointsObject;
+    public TMP_Text countdownText, pointsText;
 
-    public void UpdateUI()
-    {
-        pointsObject.GetComponent<TMP_Text>().SetText("Objective: " + gm.getPoints().ToString());
+    public void UpdateTimer(float currentTime) {
+        countdownText.text = currentTime.ToString("0");
+
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+        }
+
+        if (currentTime <= 10)
+        {
+            countdownText.color = Color.red;
+        }
     }
 
+    public void UpdateObjectiveStatus(ObjectiveStatus p)
+    {
+        pointsText.SetText(p.points.ToString());
+    }
 }
