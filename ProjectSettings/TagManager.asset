@@ -10,6 +10,7 @@ TagManager:
   - Trash
   - TrashMissedZone
   - Star
+  - Catcher
   layers:
   - Default
   - TransparentFX

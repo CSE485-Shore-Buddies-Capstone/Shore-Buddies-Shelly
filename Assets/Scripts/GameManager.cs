@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
         ui.UpdateTimer(currentTime);
+        if(currentTime < -1f) {
+            SceneLoader.Load("Home");
+        }
     }
 
     public void GameOver()
