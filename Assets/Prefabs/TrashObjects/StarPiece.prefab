@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2754420772826523680}
   - component: {fileID: -2396551915369238257}
   - component: {fileID: -4757060915814933516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StarPiece
   m_TagString: Star
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 4475560637716694434}
   - component: {fileID: 4475560637716694432}
   - component: {fileID: 4475560637716694433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729709784872278819}
   - component: {fileID: 1365381255762698094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Soap-Bubbles-PNG-Free-Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
