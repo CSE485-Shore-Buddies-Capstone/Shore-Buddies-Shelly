@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4604938699541742913}
   - component: {fileID: 2754420772826523680}
   - component: {fileID: -2396551915369238257}
+  - component: {fileID: -4757060915814933516}
   m_Layer: 0
   m_Name: StarPiece
   m_TagString: Star
@@ -168,6 +169,19 @@ MonoBehaviour:
   speed: 1
   acceleration: 0
   direction: {x: 1, y: 0, z: 0}
+--- !u!114 &-4757060915814933516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232312562357163743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d437699d1931cd246b978b1d807c50ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Star
 --- !u!1 &4475560637716694435
 GameObject:
   m_ObjectHideFlags: 0

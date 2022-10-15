@@ -36,7 +36,8 @@ public class TrashCollisionController : MonoBehaviour
             this.transform.position = lineController.catcher.transform.position;
             if(this.transform.position == lineController.origin.position){
                 caught=false;
-                gm.UpdatePointObjective(1);
+                ItemId itemIdScript = this.GetComponent<ItemId>();
+                gm.UpdateObjective(itemIdScript.id, 1);
                 Destroy(gameObject);
             }
         }

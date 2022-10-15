@@ -11,6 +11,7 @@ TagManager:
   - TrashMissedZone
   - Star
   - Catcher
+  - TrashSpawner
   layers:
   - Default
   - TransparentFX

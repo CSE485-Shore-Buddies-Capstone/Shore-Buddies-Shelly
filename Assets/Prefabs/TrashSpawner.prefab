@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4939434173658710665}
   m_Layer: 0
   m_Name: TrashSpawner
-  m_TagString: Untagged
+  m_TagString: TrashSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,4 +52,3 @@ MonoBehaviour:
   - 0.75
   - 3
   timeTillNext: 1
-  mainCamera: {fileID: 0}

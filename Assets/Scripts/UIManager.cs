@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public struct ObjectiveStatus {
-    public int points;
-}
-
 public class UIManager : MonoBehaviour
 {
     public TMP_Text countdownText, pointsText;
@@ -29,5 +25,7 @@ public class UIManager : MonoBehaviour
     public void UpdateObjectiveStatus(ObjectiveStatus p)
     {
         pointsText.SetText(p.points.ToString());
+        Debug.Log(p.collectItems["Can"]);
+        // Add visualization of the objective here
     }
 }
