@@ -11,7 +11,13 @@ public class TrashMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position += direction * speed * Time.deltaTime;
+        this.transform.position += direction * speed * Time.deltaTime;
         speed += acceleration * Time.deltaTime;
+    }
+
+    public void RotateRandomly(){
+        var euler = this.transform.eulerAngles;
+        euler.z = Random.Range(0, 360);
+        transform.eulerAngles = euler;
     }
 }
