@@ -23,7 +23,11 @@ public class LineController : MonoBehaviour
     void Start()
     {
         line = GetComponent<LineRenderer>();
-        line.SetPosition(0, origin.position);
+
+        // set line to fish line's initial position
+        line.SetPosition(0, this.transform.position);
+        line.SetPosition(1, this.transform.position);
+        
         distance = Vector3.Distance(origin.position, destination.position);
     }
 
