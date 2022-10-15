@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionController : MonoBehaviour
+public class TrashCollisionController : MonoBehaviour
 {
     private GameManager gm;
     private LineController lineController;
@@ -20,7 +20,6 @@ public class CollisionController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Catcher"){
-            gm.UpdatePointObjective(1);
             trashMovement.RotateRandomly();
             caught = true;
         }
@@ -37,6 +36,7 @@ public class CollisionController : MonoBehaviour
             this.transform.position = lineController.catcher.transform.position;
             if(this.transform.position == lineController.origin.position){
                 caught=false;
+                gm.UpdatePointObjective(1);
                 Destroy(gameObject);
             }
         }
