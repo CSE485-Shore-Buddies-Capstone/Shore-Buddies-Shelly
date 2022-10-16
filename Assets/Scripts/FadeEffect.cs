@@ -45,7 +45,7 @@ public class FadeEffect : MonoBehaviour
 
         while (count < Duration)
         {
-            count += Time.deltaTime; //use delta time with counter
+            count += Time.fixedDeltaTime; //use delta time with counter
             canvGroup.alpha = Mathf.Lerp(start, end, count / Duration);
             yield return null;
         }

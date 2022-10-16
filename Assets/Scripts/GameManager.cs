@@ -10,15 +10,18 @@ public struct ObjectiveStatus {
 public class GameManager : MonoBehaviour
 {
     public UIManager ui;
+    public float startingTime = 60f;
 
+    private float currentTime;
     private int initialMin = 1, initialMax = 2;
-    private float currentTime, startingTime = 60f;
     private List<GameObject> subjects;
     private ObjectiveStatus objectiveStatus;
     private int level = 1;
+    private SceneLoader sceneLoader;
 
     void Start()
     {
+        sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
         Spawner spawnerScript = GameObject.FindGameObjectWithTag("TrashSpawner").GetComponent<Spawner>();
         subjects = spawnerScript.subjects;
         currentTime = startingTime;
@@ -31,13 +34,19 @@ public class GameManager : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         ui.UpdateTimer(currentTime);
         if(currentTime < 0f) {
-            SceneLoader.Load("Home");
+            GameOver();
         }
     }
 
     public void GameOver()
     {
-        SceneLoader.Load("Home");
+        PauseGame();
+        ui.ShowGameOver();
+    }
+
+    public void LoadHome() {
+        Debug.Log("LoadingHome");
+        sceneLoader.Load("Home");
     }
 
     public void UpdateObjective(string id, int pointsAdd)
@@ -54,7 +63,8 @@ public class GameManager : MonoBehaviour
                 allZero = false;
         }
         if(allZero) {
-            MoveNextLevel();
+            PauseGame();
+            ui.ShowLevelResults();
         }
     }
 
@@ -73,7 +83,7 @@ public class GameManager : MonoBehaviour
         ui.UpdateObjectiveStatus(objectiveStatus);
     }
 
-    private void MoveNextLevel() {
+    public void MoveNextLevel() {
         level += 1;
         currentTime = startingTime;
         if(level % 2 == 1)
@@ -81,5 +91,14 @@ public class GameManager : MonoBehaviour
         initialMax++;
         AssignNewObjective(objectiveStatus.points, initialMin, initialMax);
         ui.UpdateObjectiveStatus(objectiveStatus);
+        ResumeGame();
+    }
+
+    public void PauseGame() {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame() {
+        Time.timeScale = 1;
     }
 }

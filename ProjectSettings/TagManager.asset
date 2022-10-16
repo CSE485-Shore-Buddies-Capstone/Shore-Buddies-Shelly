@@ -12,6 +12,7 @@ TagManager:
   - Star
   - Catcher
   - TrashSpawner
+  - SceneLoader
   layers:
   - Default
   - TransparentFX

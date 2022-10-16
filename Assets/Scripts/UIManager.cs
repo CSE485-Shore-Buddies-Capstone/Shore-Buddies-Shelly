@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public List<GameObject> collectablesUI;
     public TMP_Text countdownText, pointsText;
     public GameObject collectionHolder;
+    public GameObject levelDisplayPanel, gameOverPanel;
 
     private List<GameObject> collectablesUIInstantiated = new List<GameObject>();
 
@@ -57,5 +58,13 @@ public class UIManager : MonoBehaviour
                 itemText.SetText("x" + p.collectItems[idScript.id].ToString());
             }
         }
+    }
+
+    public void ShowGameOver() {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ShowLevelResults() {
+        levelDisplayPanel.SetActive(true);
     }
 }

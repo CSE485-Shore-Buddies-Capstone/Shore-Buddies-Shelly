@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.69000244, y: 25.600006}
+  m_AnchoredPosition: {x: 0.69000244, y: 25.600037}
   m_SizeDelta: {x: -580.48, y: -269.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7652794
@@ -312,6 +312,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9840023}
   m_CullTransparentMesh: 1
+--- !u!1001 &16264642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4048529219878535551, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 309659532}
+    - target: {fileID: 4048529220714935099, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935099, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05942461
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3500802
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.2910595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220714935101, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220907555225, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.6779785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048529220907555225, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.15698242
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf2a4121dc1afd64fbc87270286de151, type: 3}
 --- !u!1 &25559275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1133,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867576243}
     m_Modifications:
+    - target: {fileID: 6437659563742667003, guid: 1dfa72bbf57af2a4d8e5afe01d9647d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6437659563914951328, guid: 1dfa72bbf57af2a4d8e5afe01d9647d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1159,6 +1236,10 @@ PrefabInstance:
     - target: {fileID: 6437659563914951329, guid: 1dfa72bbf57af2a4d8e5afe01d9647d6, type: 3}
       propertyPath: m_Name
       value: ShellyUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437659563914951329, guid: 1dfa72bbf57af2a4d8e5afe01d9647d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dfa72bbf57af2a4d8e5afe01d9647d6, type: 3}
@@ -1471,6 +1552,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &210530133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +1826,7 @@ GameObject:
   - component: {fileID: 285140108}
   - component: {fileID: 285140107}
   m_Layer: 5
-  m_Name: NextLevelButton
+  m_Name: PlayAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,19 +1895,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 285140108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 914339132}
-        m_TargetAssemblyTypeName: FadeEffect, Assembly-CSharp
-        m_MethodName: FadeExit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &285140108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,6 +2255,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3637,7 +3730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.69000244, y: 25.600006}
+  m_AnchoredPosition: {x: 0.69000244, y: 25.600037}
   m_SizeDelta: {x: -580.48, y: -269.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867576244
@@ -5269,10 +5362,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8670359363787619845}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5353,7 +5458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.68499756, y: 3.3000183}
+  m_AnchoredPosition: {x: 0.68499756, y: 3.3000488}
   m_SizeDelta: {x: -531.66, y: -32.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254047930
@@ -5807,6 +5912,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1326733060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5928,17 +6045,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8670359363787619845}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadHome
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1348938605
 MonoBehaviour:
@@ -6246,6 +6363,8 @@ MonoBehaviour:
   countdownText: {fileID: 1592381051}
   pointsText: {fileID: 882007208}
   collectionHolder: {fileID: 491016431}
+  levelDisplayPanel: {fileID: 9840023}
+  gameOverPanel: {fileID: 914339130}
 --- !u!114 &1418413782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,6 +6378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1418413781}
+  startingTime: 5
 --- !u!114 &1418413783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8114,7 +8234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.68499756, y: 3.3000183}
+  m_AnchoredPosition: {x: 0.68499756, y: 3.3000488}
   m_SizeDelta: {x: -531.66, y: -32.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056919070
@@ -8531,7 +8651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5.0000305}
+  m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138829601
@@ -8790,6 +8910,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8670359363787619841}
         m_TargetAssemblyTypeName: FadeEffect, Assembly-CSharp
         m_MethodName: FadeExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11432,6 +11564,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &8670359363437165359
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11604,6 +11748,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8670359363787619841}
         m_TargetAssemblyTypeName: FadeEffect, Assembly-CSharp
         m_MethodName: FadeExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12728,14 +12884,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1418413782}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameOver
+        m_MethodName: LoadHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Home
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!224 &8670359364131525400
@@ -12862,6 +13018,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8670359363347456937}
         m_TargetAssemblyTypeName: FadeEffect, Assembly-CSharp
         m_MethodName: FadeExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
