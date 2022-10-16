@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 {
     public List<GameObject> collectablesUI;
     public TMP_Text countdownText, pointsText;
+    public TMP_Text levelPassedDisplay, pointsEarned, totalPoints;
+    public TMP_Text finalLevelPassedDisplay, finalPointsEarned;
     public GameObject collectionHolder;
     public GameObject levelDisplayPanel, gameOverPanel;
 
@@ -58,6 +60,17 @@ public class UIManager : MonoBehaviour
                 itemText.SetText("x" + p.collectItems[idScript.id].ToString());
             }
         }
+    }
+
+    public void UpdateLevelScores(int pEarned, int pTotal, int level) {
+        pointsEarned.SetText("Points Earned: " + pEarned.ToString());
+        totalPoints.SetText("Total Points: " + pTotal.ToString());
+        levelPassedDisplay.SetText("You passed level " + level.ToString() + "!");
+    }
+
+    public void UpdateFinalScores(int level, int pTotal) {
+        finalLevelPassedDisplay.SetText("Levels Passed: " + level.ToString());
+        finalPointsEarned.SetText("Final Score: " + pTotal.ToString());
     }
 
     public void ShowGameOver() {

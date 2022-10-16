@@ -1895,7 +1895,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 285140108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReloadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &285140108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4654,7 +4666,7 @@ GameObject:
   - component: {fileID: 1067168803}
   - component: {fileID: 1067168802}
   m_Layer: 5
-  m_Name: PointsEarnedText
+  m_Name: LevelsPassed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4699,7 +4711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Total score: __'
+  m_text: 'Levels Passed: __'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 625252fc2cff1024eb7227c89a5cb72d, type: 2}
   m_sharedMaterial: {fileID: 686123431470218670, guid: 625252fc2cff1024eb7227c89a5cb72d, type: 2}
@@ -5374,18 +5386,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1418413782}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ResumeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1250823695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5511,7 +5511,7 @@ GameObject:
   - component: {fileID: 1254615199}
   - component: {fileID: 1254615198}
   m_Layer: 5
-  m_Name: BestPoints
+  m_Name: FinalPointsEarned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5556,7 +5556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your best: __'
+  m_text: 'Points Earned: __'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 625252fc2cff1024eb7227c89a5cb72d, type: 2}
   m_sharedMaterial: {fileID: 686123431470218670, guid: 625252fc2cff1024eb7227c89a5cb72d, type: 2}
@@ -5900,9 +5900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9840025}
-        m_TargetAssemblyTypeName: FadeEffect, Assembly-CSharp
-        m_MethodName: FadeExit
+      - m_Target: {fileID: 1418413782}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5912,10 +5912,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1418413782}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MoveNextLevel
-        m_Mode: 1
+      - m_Target: {fileID: 9840023}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6362,6 +6362,11 @@ MonoBehaviour:
   - {fileID: 7055249657249021339, guid: 285b077824fcd4e41bd8910a4352ed3d, type: 3}
   countdownText: {fileID: 1592381051}
   pointsText: {fileID: 882007208}
+  levelPassedDisplay: {fileID: 1644784828}
+  pointsEarned: {fileID: 236895948}
+  totalPoints: {fileID: 1172020381}
+  finalLevelPassedDisplay: {fileID: 1067168802}
+  finalPointsEarned: {fileID: 1254615198}
   collectionHolder: {fileID: 491016431}
   levelDisplayPanel: {fileID: 9840023}
   gameOverPanel: {fileID: 914339130}
@@ -6378,7 +6383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1418413781}
-  startingTime: 5
+  startingTime: 60
 --- !u!114 &1418413783
 MonoBehaviour:
   m_ObjectHideFlags: 0

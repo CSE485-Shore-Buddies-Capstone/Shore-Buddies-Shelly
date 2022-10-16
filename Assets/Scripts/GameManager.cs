@@ -16,11 +16,12 @@ public class GameManager : MonoBehaviour
     private int initialMin = 1, initialMax = 2;
     private List<GameObject> subjects;
     private ObjectiveStatus objectiveStatus;
-    private int level = 1;
+    private int level = 1, pointsAtLevelBegin = 0;
     private SceneLoader sceneLoader;
 
     void Start()
     {
+        ResumeGame();
         sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
         Spawner spawnerScript = GameObject.FindGameObjectWithTag("TrashSpawner").GetComponent<Spawner>();
         subjects = spawnerScript.subjects;
@@ -41,12 +42,16 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         PauseGame();
+        ui.UpdateFinalScores(level - 1, objectiveStatus.points);
         ui.ShowGameOver();
     }
 
     public void LoadHome() {
-        Debug.Log("LoadingHome");
         sceneLoader.Load("Home");
+    }
+
+    public void ReloadGame() {
+        sceneLoader.Load("FishingGame");
     }
 
     public void UpdateObjective(string id, int pointsAdd)
@@ -64,6 +69,7 @@ public class GameManager : MonoBehaviour
         }
         if(allZero) {
             PauseGame();
+            ui.UpdateLevelScores(objectiveStatus.points - pointsAtLevelBegin, objectiveStatus.points, level);
             ui.ShowLevelResults();
         }
     }
@@ -86,6 +92,7 @@ public class GameManager : MonoBehaviour
     public void MoveNextLevel() {
         level += 1;
         currentTime = startingTime;
+        pointsAtLevelBegin = objectiveStatus.points;
         if(level % 2 == 1)
             initialMin++;
         initialMax++;

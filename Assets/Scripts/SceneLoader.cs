@@ -12,7 +12,6 @@ public class SceneLoader: MonoBehaviour
     public GameObject canvas;
 
     void Start(){
-        Time.timeScale = 1;
         canvas.SetActive(false);
     }
 
@@ -23,12 +22,9 @@ public class SceneLoader: MonoBehaviour
     }
 
     private IEnumerator LoadRoutine(string scene){
-        Debug.Log("IN");
-        Time.timeScale = 1;
         // bubbleEffect.SetActive(true);
         transition.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(transitionTime);
-        Debug.Log("OUT");
+        yield return new WaitForSecondsRealtime(transitionTime);
         SceneManager.LoadScene(scene);
     }
 }
