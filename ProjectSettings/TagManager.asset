@@ -10,6 +10,9 @@ TagManager:
   - Trash
   - TrashMissedZone
   - Star
+  - Catcher
+  - TrashSpawner
+  - SceneLoader
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - UI
   - Shelly
   - 
-  - 
+  - Item
   - 
   - 
   - 

@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2839096598287056666}
   - component: {fileID: 2839096598287056661}
-  - component: {fileID: 2839096598287056664}
-  - component: {fileID: 2839096598287056667}
+  - component: {fileID: 1180948729201014993}
   - component: {fileID: 8043610597230030478}
   - component: {fileID: 5745752822183676526}
   - component: {fileID: 6377771467987386971}
-  m_Layer: 0
+  - component: {fileID: 3680737861363714716}
+  - component: {fileID: 1974139904909384243}
+  m_Layer: 8
   m_Name: TrashPieceFlipFlop
   m_TagString: Trash
   m_Icon: {fileID: 0}
@@ -87,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2839096598287056664
-BoxCollider2D:
+--- !u!68 &1180948729201014993
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -100,33 +101,24 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0202708, y: -0.06701946}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 18}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.922378, y: 3.4513493}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!114 &2839096598287056667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839096598287056660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36825e991d05aae419c606489801e538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 3
-  fallAcceleration: 0.1
+  m_Points:
+  - {x: -0.15730691, y: -3.485443}
+  - {x: -2.2032127, y: -2.6225586}
+  - {x: -2.8698328, y: -1.045639}
+  - {x: -0.06444803, y: 1.8218384}
+  - {x: 0.18681008, y: 2.8928223}
+  - {x: 0.699366, y: 2.7516174}
+  - {x: 2.1429005, y: 4.3245316}
+  - {x: 2.9333072, y: 3.3962708}
+  - {x: 1.6366624, y: 0.28115845}
+  - {x: 1.2593626, y: -2.5755463}
+  - {x: 0.09276199, y: -3.485443}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &8043610597230030478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc7a161f600c54409ae193425aa3319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteTimer: 60
+  deleteTimer: 30
 --- !u!114 &5745752822183676526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +157,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subjectRatio: 0.25
+--- !u!114 &3680737861363714716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2da5a52ee7b8047a7067cff95c0526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  acceleration: 0
+  direction: {x: 1, y: 0, z: 0}
+--- !u!114 &1974139904909384243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d437699d1931cd246b978b1d807c50ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: FlipFlop

@@ -1,50 +1,83 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine;
 
-//THIS SCRIPT IS CALLED WHENEVER WE HAVE TO LIVE UPDATE THE UI AT ANY POINT (points, lives, levels, etc.)
 public class UIManager : MonoBehaviour
 {
+    public List<GameObject> collectablesUI;
+    public TMP_Text countdownText, pointsText;
+    public TMP_Text levelPassedDisplay, pointsEarned, totalPoints;
+    public TMP_Text finalLevelPassedDisplay, finalPointsEarned;
+    public GameObject collectionHolder;
+    public GameObject levelDisplayPanel, gameOverPanel;
 
-    private GameObject pointsObject;
-    private GameObject livesObject;
+    private List<GameObject> collectablesUIInstantiated = new List<GameObject>();
 
-    private GameManager GM;
-
-    //This needs to be AWAKE not START. AWAKE runs BEFORE START, and the UI needs to be initialized early.
-    void Awake()
-    {
-        GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-
-        pointsObject = GameObject.FindGameObjectWithTag("Points");
-        livesObject = GameObject.FindGameObjectWithTag("Lives");
+    void Start() {
+        foreach (Transform child in collectionHolder.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        foreach (GameObject c in collectablesUI) {
+            GameObject collectable = Instantiate(c, collectionHolder.transform);
+            collectablesUIInstantiated.Add(collectable);
+        }
     }
 
-    void Update()
-    {
-        
-    }
+    public void UpdateTimer(float currentTime) {
+        countdownText.text = currentTime.ToString("0");
 
-
-    public void UpdateUI()
-    {
-        pointsObject.GetComponent<TMP_Text>().SetText("Points: " + GM.getPoints().ToString());
-        ManageLives(GM.getLives());
-    }
-
-    private void ManageLives(int lives)
-    {
-        foreach(Transform life_tf in livesObject.transform)
+        if (currentTime <= 0)
         {
-            if (int.Parse(life_tf.name) >= lives)
-            {
-                life_tf.gameObject.SetActive(false); 
+            currentTime = 0;
+        }
+
+        if (currentTime <= 10)
+        {
+            countdownText.color = Color.red;
+        }
+        else
+            countdownText.color = Color.black;
+    }
+
+    public void UpdateObjectiveStatus(ObjectiveStatus p)
+    {
+        pointsText.SetText(p.points.ToString());
+        
+        foreach(GameObject c in collectablesUIInstantiated) {
+            ItemId idScript = c.GetComponent<ItemId>();
+            if(p.collectItems[idScript.id] <= 0) {
+                // turn on checkmark
+                c.transform.GetChild(3).gameObject.SetActive(true);
+                // turn off text
+                c.transform.GetChild(2).gameObject.SetActive(false);
             }
-            else if(int.Parse(life_tf.name) <= lives){
-                life_tf.gameObject.SetActive(true);
+            else { // update otherwise
+                c.transform.GetChild(3).gameObject.SetActive(false);
+                c.transform.GetChild(2).gameObject.SetActive(true);
+                TMP_Text itemText = c.GetComponentInChildren<TMP_Text>();
+                itemText.SetText("x" + p.collectItems[idScript.id].ToString());
             }
         }
+    }
+
+    public void UpdateLevelScores(int pEarned, int pTotal, int level) {
+        pointsEarned.SetText("Points Earned: " + pEarned.ToString());
+        totalPoints.SetText("Total Points: " + pTotal.ToString());
+        levelPassedDisplay.SetText("You passed level " + level.ToString() + "!");
+    }
+
+    public void UpdateFinalScores(int level, int pTotal) {
+        finalLevelPassedDisplay.SetText("Levels Passed: " + level.ToString());
+        finalPointsEarned.SetText("Final Score: " + pTotal.ToString());
+    }
+
+    public void ShowGameOver() {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ShowLevelResults() {
+        levelDisplayPanel.SetActive(true);
     }
 }

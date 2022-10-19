@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2839096598287056666}
   - component: {fileID: 2839096598287056661}
-  - component: {fileID: 2839096598287056664}
-  - component: {fileID: 2839096598287056667}
+  - component: {fileID: 3267819904810369047}
   - component: {fileID: 8043610597230030478}
   - component: {fileID: -5339811742584075291}
   - component: {fileID: -6943125402595130901}
-  m_Layer: 0
+  - component: {fileID: 7659271504390580219}
+  - component: {fileID: -6359490976216364317}
+  m_Layer: 8
   m_Name: TrashPieceBattery
   m_TagString: Trash
   m_Icon: {fileID: 0}
@@ -87,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2839096598287056664
-BoxCollider2D:
+--- !u!68 &3267819904810369047
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -100,33 +101,19 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0202708, y: -0.06701946}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 18}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.922378, y: 3.4513493}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!114 &2839096598287056667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839096598287056660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36825e991d05aae419c606489801e538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 3
-  fallAcceleration: 0.1
+  m_Points:
+  - {x: 2.5052185, y: -1.2836456}
+  - {x: -6.3786488, y: -1.7857361}
+  - {x: -6.351438, y: 1.3798065}
+  - {x: 2.2840881, y: 1.7590637}
+  - {x: 2.6946826, y: 0.15358734}
+  - {x: 2.3440886, y: -1.2360992}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &8043610597230030478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc7a161f600c54409ae193425aa3319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteTimer: 60
+  deleteTimer: 30
 --- !u!114 &-5339811742584075291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +152,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subjectRatio: 0.25
+--- !u!114 &7659271504390580219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2da5a52ee7b8047a7067cff95c0526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  acceleration: 0
+  direction: {x: 1, y: 0, z: 0}
+--- !u!114 &-6359490976216364317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839096598287056660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d437699d1931cd246b978b1d807c50ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Battery

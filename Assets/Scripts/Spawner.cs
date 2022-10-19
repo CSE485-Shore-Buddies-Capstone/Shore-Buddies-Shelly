@@ -9,9 +9,9 @@ public class Spawner : MonoBehaviour
     public float timeTillNext = 1f;
     
     private Camera mainCamera;
-    private Vector3 pointTopLeft;
-    private Vector3 pointTopRight;
+    private Vector3 pointTopLeft, pointTopRight, pointBottomRight, pointBottomLeft;
     private Vector2 res;
+    // private float[] screenRange = new float[]{0.2f, 1f};
 
     void Start() {
         mainCamera = Camera.main;
@@ -26,10 +26,19 @@ public class Spawner : MonoBehaviour
             setScreenConstants();
         }
         if(timeTillNext <= 0) {
-            float xSpawn = Random.Range(pointTopLeft.x, pointTopRight.x);
-            float ratioAboveScreen = 5f/4f;
-            Vector3 thisLocation = new Vector3(xSpawn, -pointTopLeft.y * ratioAboveScreen, 0f);
-            Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
+            {
+                float ySpawnOffset = Random.Range(pointTopLeft.y, pointBottomLeft.y / 2);
+                float ratioOffScreen = 5f/4f;
+                Vector3 thisLocation = new Vector3(pointTopLeft.x * ratioOffScreen, pointTopLeft.y / 2 + ySpawnOffset, 0f);
+                Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
+            }
+            {
+                float ySpawnOffset = Random.Range(pointTopRight.y, pointBottomRight.y / 2);
+                float ratioOffScreen = 5f/4f;
+                Vector3 thisLocation = new Vector3(pointTopRight.x * ratioOffScreen, pointTopRight.y / 2 + ySpawnOffset, 0f);
+                GameObject trash = Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
+                trash.GetComponent<TrashMovement>().direction = Vector3.left;
+            }
             timeTillNext = Random.Range(timeBetweenRange[0], timeBetweenRange[1]);
         }
         timeTillNext -= Time.deltaTime;
@@ -38,5 +47,7 @@ public class Spawner : MonoBehaviour
     private void setScreenConstants() {
         pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
         pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
+        pointBottomLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, Screen.height, mainCamera.nearClipPlane));
+        pointBottomRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.nearClipPlane));
     }
 }

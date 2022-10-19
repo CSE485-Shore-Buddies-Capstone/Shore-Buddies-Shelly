@@ -13,8 +13,12 @@ public class HomeUI : MonoBehaviour
     public float transitionTime;
     //public GameObject bubbleEffect; //TODO: still working on it
 
+    private SceneLoader sceneLoader;
+
     void Start(){
+        Time.timeScale = 1;
         playButton.onClick.AddListener(PlayGameWrap);
+        sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
     }
 
     //wrapper to call the coroutined transition when play button is clicked
@@ -26,6 +30,6 @@ public class HomeUI : MonoBehaviour
         // bubbleEffect.SetActive(true);
         transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(transitionTime);
-        SceneLoader.Load("CatchingGame");
+        sceneLoader.Load("FishingGame");
     }
 }

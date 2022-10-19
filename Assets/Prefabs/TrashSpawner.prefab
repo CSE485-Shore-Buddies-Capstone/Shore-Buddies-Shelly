@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4939434173658710665}
   m_Layer: 0
   m_Name: TrashSpawner
-  m_TagString: Untagged
+  m_TagString: TrashSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   - {fileID: 2839096598287056660, guid: 08f4c4fa1e3be1b46a989309b8d3d9a1, type: 3}
   - {fileID: 2839096598287056660, guid: 13328876436b216418d821c271775c15, type: 3}
   - {fileID: 2839096598287056660, guid: 9339ad3027b12de439b3153e1b5e9636, type: 3}
+  - {fileID: 4769890743603519363, guid: 475fecc8b5a3ee140af0bb4dfd5def44, type: 3}
   timeBetweenRange:
   - 0.75
   - 3
   timeTillNext: 1
-  mainCamera: {fileID: 0}
