@@ -10,6 +10,7 @@ public struct ObjectiveStatus {
 public class GameManager : MonoBehaviour
 {
     public UIManager ui;
+    public LeaderboardHandler leaderboard;
     public float startingTime = 60f;
 
     private float currentTime;
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
         if(objectiveStatus.collectItems[id] > 0)
             objectiveStatus.collectItems[id] = objectiveStatus.collectItems[id] - 1;
         ui.UpdateObjectiveStatus(objectiveStatus);
+        leaderboard.updateScore(objectiveStatus.points);
 
         bool allZero = true;
         foreach(KeyValuePair<string, int> entry in objectiveStatus.collectItems) {
