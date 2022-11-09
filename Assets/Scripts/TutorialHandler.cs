@@ -18,6 +18,15 @@ public class TutorialHandler : MonoBehaviour
         nextStepButton.onClick.AddListener(NextStep);
     }
 
+    // Always start at step 0
+    void OnEnable() {
+        GameObject previousStepChild = stepsHolder.transform.GetChild(currentStep).gameObject;
+        currentStep = 0;
+        previousStepChild.SetActive(false);
+        GameObject currentStepChild = stepsHolder.transform.GetChild(currentStep).gameObject;
+        currentStepChild.SetActive(true);
+    }
+
     void LastStep(){
         GameObject previousStepChild = stepsHolder.transform.GetChild(currentStep).gameObject;
         previousStepChild.SetActive(false);
