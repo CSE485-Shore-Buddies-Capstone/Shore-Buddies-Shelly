@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ca7c6d687791e4eaf4bcddfa20de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subjectRatio: 0.25
+  subjectRatio: 0.35
 --- !u!114 &8568079959568999164
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,12 +10,15 @@ public class UIManager : MonoBehaviour
     public TMP_Text countdownText, pointsText;
     public TMP_Text levelPassedDisplay, pointsEarned, totalPoints;
     public TMP_Text finalLevelPassedDisplay, finalPointsEarned;
+    public TMP_Text levelText;
     public GameObject collectionHolder;
     public GameObject levelDisplayPanel, gameOverPanel;
+    public BackgroundController bkgndController;
 
     private List<GameObject> collectablesUIInstantiated = new List<GameObject>();
 
     void Start() {
+        bkgndController = FindObjectOfType<BackgroundController>();
         foreach (Transform child in collectionHolder.transform) {
             GameObject.Destroy(child.gameObject);
         }
@@ -72,7 +75,13 @@ public class UIManager : MonoBehaviour
         finalLevelPassedDisplay.SetText("Levels Passed: " + level.ToString());
         finalPointsEarned.SetText("Final Score: " + pTotal.ToString());
     }
-
+    public void UpdateLevelText(int level){
+        levelText.text = "Level " + level;
+        levelText.GetComponent<FadeEffect>().FadeEnter();
+    }
+    public void UpdateBackground(){
+        bkgndController.NextBackground();
+    }
     public void ShowGameOver() {
         gameOverPanel.SetActive(true);
     }

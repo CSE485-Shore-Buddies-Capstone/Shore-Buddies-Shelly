@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
         initialMax++;
         AssignNewObjective(objectiveStatus.points, initialMin, initialMax);
         ui.UpdateObjectiveStatus(objectiveStatus);
+        ui.UpdateLevelText(level);
+        ui.UpdateBackground();
         ResumeGame();
     }
 
