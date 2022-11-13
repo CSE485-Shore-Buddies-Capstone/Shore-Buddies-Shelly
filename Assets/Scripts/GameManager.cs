@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ReloadGame() {
-        sceneLoader.Load("FishingGame");
+        sceneLoader.LoadGame();
     }
 
     public void UpdateObjective(string id, int pointsAdd)

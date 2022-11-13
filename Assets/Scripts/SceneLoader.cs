@@ -13,7 +13,10 @@ public class SceneLoader: MonoBehaviour
 
     void Start(){
         canvas.SetActive(false);
-        SetHorizontal(); // by default
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+            this.SetVertical();
+        else
+            this.SetHorizontal();
     }
 
     //will temporarily take in string scene (move onto enum later)
