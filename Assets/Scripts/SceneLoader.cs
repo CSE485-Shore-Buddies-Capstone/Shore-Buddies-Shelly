@@ -17,6 +17,15 @@ public class SceneLoader: MonoBehaviour
     }
 
     //will temporarily take in string scene (move onto enum later)
+    public void LoadGame(){
+        Debug.Log(SystemInfo.deviceType);
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+            this.Load("FishingGameMobile");
+        else
+            this.Load("FishingGame");
+    }
+
+    //will temporarily take in string scene (move onto enum later)
     public void Load(string scene){
         canvas.SetActive(true);
         StartCoroutine(LoadRoutine(scene));
