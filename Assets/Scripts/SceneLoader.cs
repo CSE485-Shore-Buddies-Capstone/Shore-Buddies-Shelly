@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader: MonoBehaviour
@@ -10,6 +11,9 @@ public class SceneLoader: MonoBehaviour
     public Animator transition;
     public float transitionTime = 4f;
     public GameObject canvas;
+    public TMP_Text infoText;
+    public TextAsset jsonFile;
+    private InfoText infoTextObj;
 
     void Start(){
         canvas.SetActive(false);
@@ -17,6 +21,9 @@ public class SceneLoader: MonoBehaviour
             this.SetVertical();
         else
             this.SetHorizontal();
+        
+        infoTextObj = InfoText.CreateFromJSON(jsonFile.text);
+        infoText.SetText(infoTextObj.options[Random.Range(0, infoTextObj.options.Length)]);
     }
 
     //will temporarily take in string scene (move onto enum later)
@@ -66,5 +73,15 @@ public class SceneLoader: MonoBehaviour
             Application.Quit();
         }
     }
+}
 
+[System.Serializable]
+public class InfoText
+{
+    public string[] options;
+
+    public static InfoText CreateFromJSON(string jsonString)
+    {
+        return JsonUtility.FromJson<InfoText>(jsonString);
+    }
 }

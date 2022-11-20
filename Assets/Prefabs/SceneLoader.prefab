@@ -469,6 +469,8 @@ MonoBehaviour:
   transition: {fileID: 4048529220907555229}
   transitionTime: 4
   canvas: {fileID: 4048529219878535547}
+  infoText: {fileID: 4048529220818429659}
+  jsonFile: {fileID: 4900000, guid: 371ca8c0bf024744bb6f5b38571c3446, type: 3}
 --- !u!1 &4048529220730955175
 GameObject:
   m_ObjectHideFlags: 0
