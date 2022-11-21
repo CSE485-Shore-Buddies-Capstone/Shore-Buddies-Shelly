@@ -1844,7 +1844,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6a48561e03a5eb3488ef930eb69f82ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 0
@@ -18425,7 +18425,6 @@ MonoBehaviour:
   collectionHolder: {fileID: 491016431}
   levelDisplayPanel: {fileID: 9840023}
   gameOverPanel: {fileID: 914339130}
-  FunFact: {fileID: 0}
   bkgndController: {fileID: 0}
 --- !u!114 &1418413782
 MonoBehaviour:
@@ -19873,6 +19872,7 @@ GameObject:
   - component: {fileID: 1571802916}
   - component: {fileID: 1571802918}
   - component: {fileID: 1571802917}
+  - component: {fileID: 1571802919}
   m_Layer: 5
   m_Name: ShellyBubble
   m_TagString: Untagged
@@ -19939,6 +19939,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571802915}
   m_CullTransparentMesh: 1
+--- !u!114 &1571802919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571802915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d42be09f2a0cfe439fd3239e8638826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoText: {fileID: 732468602}
+  jsonFile: {fileID: 4900000, guid: 371ca8c0bf024744bb6f5b38571c3446, type: 3}
 --- !u!1 &1578999719
 GameObject:
   m_ObjectHideFlags: 0
