@@ -27,15 +27,18 @@ public class Spawner : MonoBehaviour
         }
         if(timeTillNext <= 0) {
             {
-                float ySpawnOffset = Random.Range(pointTopLeft.y, pointBottomLeft.y / 2);
+                
+                Vector3 middle = (pointTopLeft + pointBottomLeft) / 2;
+                float ySpawnOffset = Random.Range(middle.y, pointBottomLeft.y);
                 float ratioOffScreen = 5f/4f;
-                Vector3 thisLocation = new Vector3(pointTopLeft.x * ratioOffScreen, pointTopLeft.y / 2 + ySpawnOffset, 0f);
+                Vector3 thisLocation = new Vector3(pointTopLeft.x * ratioOffScreen, middle.y - 0.9f * ySpawnOffset, 0f);
                 Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
             }
             {
-                float ySpawnOffset = Random.Range(pointTopRight.y, pointBottomRight.y / 2);
+                Vector3 middle = (pointTopRight + pointBottomRight) / 2;
+                float ySpawnOffset = Random.Range(middle.y, pointBottomRight.y);
                 float ratioOffScreen = 5f/4f;
-                Vector3 thisLocation = new Vector3(pointTopRight.x * ratioOffScreen, pointTopRight.y / 2 + ySpawnOffset, 0f);
+                Vector3 thisLocation = new Vector3(pointTopRight.x * ratioOffScreen, middle.y - 0.9f * ySpawnOffset, 0f);
                 GameObject trash = Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
                 trash.GetComponent<TrashMovement>().direction = Vector3.left;
             }
