@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 {
     public UIManager ui;
     public LeaderboardHandler leaderboard;
+    public ThoughtBubbleHelper thoughtBubbleHelper;
     public float startingTime = 60f;
 
     private float currentTime;
@@ -102,6 +103,7 @@ public class GameManager : MonoBehaviour
         ui.UpdateObjectiveStatus(objectiveStatus);
         ui.UpdateLevelText(level);
         ui.UpdateBackground();
+        thoughtBubbleHelper.SetNewText();
         ResumeGame();
     }
 
