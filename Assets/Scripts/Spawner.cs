@@ -26,31 +26,32 @@ public class Spawner : MonoBehaviour
             setScreenConstants();
         }
         if(timeTillNext <= 0) {
-            {
-                
-                Vector3 middle = (pointTopLeft + pointBottomLeft) / 2;
-                float ySpawnOffset = Random.Range(middle.y, pointBottomLeft.y);
-                float ratioOffScreen = 5f/4f;
-                Vector3 thisLocation = new Vector3(pointTopLeft.x * ratioOffScreen, middle.y - 0.9f * ySpawnOffset, 0f);
-                Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
-            }
-            {
-                Vector3 middle = (pointTopRight + pointBottomRight) / 2;
-                float ySpawnOffset = Random.Range(middle.y, pointBottomRight.y);
-                float ratioOffScreen = 5f/4f;
-                Vector3 thisLocation = new Vector3(pointTopRight.x * ratioOffScreen, middle.y - 0.9f * ySpawnOffset, 0f);
-                GameObject trash = Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
-                trash.GetComponent<TrashMovement>().direction = Vector3.left;
-            }
+            spawnFrom(pointTopLeft, pointBottomLeft, Vector3.right);
+            spawnFrom(pointTopRight, pointBottomRight, Vector3.left);
             timeTillNext = Random.Range(timeBetweenRange[0], timeBetweenRange[1]);
         }
         timeTillNext -= Time.deltaTime;
     }
 
+    private void spawnFrom(Vector3 top, Vector3 bottom, Vector3 direction) {
+        Vector3 middle = bottom + (top - bottom) * 0.5f;
+                
+        if (SystemInfo.deviceType == DeviceType.Handheld) { // different for handheld
+            middle = bottom + (top - bottom) * 0.6f;
+        }
+
+        float ySpawnOffset = Random.Range(bottom.y, middle.y);
+        float ratioOffScreen = 5f/4f;
+
+        Vector3 thisLocation = new Vector3(top.x * ratioOffScreen, ySpawnOffset, 0f);
+        GameObject trash = Instantiate(subjects[Random.Range(0, subjects.Count)], thisLocation, new Quaternion());
+        trash.GetComponent<TrashMovement>().direction = direction;
+    }
+
     private void setScreenConstants() {
-        pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
-        pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
-        pointBottomLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, Screen.height, mainCamera.nearClipPlane));
-        pointBottomRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.nearClipPlane));
+        pointBottomLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
+        pointBottomRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, 0, mainCamera.nearClipPlane));
+        pointTopLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, Screen.height, mainCamera.nearClipPlane));
+        pointTopRight = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.nearClipPlane));
     }
 }
