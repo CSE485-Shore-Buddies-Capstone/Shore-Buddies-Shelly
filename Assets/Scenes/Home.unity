@@ -10162,7 +10162,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 829859442}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: playBackgroundMusic
+        m_MethodName: pauseBackgroundMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
