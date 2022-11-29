@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         ResumeGame();
+
+        // pauses game if first time playing, or if first tutorial is enabled
+        if(!PlayerPrefs.HasKey("FirstTutorialEnabled")){
+            PauseGame();
+        }else{
+            if(PlayerPrefs.GetInt("FirstTutorialEnabled") == 1){
+                PauseGame();
+            }
+        }
+
         sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
         Spawner spawnerScript = GameObject.FindGameObjectWithTag("TrashSpawner").GetComponent<Spawner>();
         subjects = spawnerScript.subjects;
