@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         if(!PlayerPrefs.HasKey("FirstTutorialEnabled")){
             PauseGame();
         }else{
-            if(PlayerPrefs.GetInt("FirstTutorialEnabled") == 1){
+            if(PlayerPrefs.GetInt("FirstTutorialEnabled") == 0){
                 PauseGame();
             }
         }

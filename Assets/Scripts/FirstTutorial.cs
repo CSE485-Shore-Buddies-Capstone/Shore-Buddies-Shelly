@@ -4,8 +4,8 @@ using UnityEngine;
 
 /// <summary>
 /// load first time user status
-/// 0 = disabled help
-/// 1 = enabled help
+/// 0 = enabled help
+/// 1 = disabled help
 /// </summary>
 public class FirstTutorial : MonoBehaviour
 {
@@ -15,9 +15,8 @@ public class FirstTutorial : MonoBehaviour
         // first time playing because player pref was not set, then disable once set
         if(!PlayerPrefs.HasKey("FirstTutorialEnabled")){
             firstHelpPanel.SetActive(true);
-            PlayerPrefs.SetInt("FirstTutorialEnabled", 0);
         }else{
-            if(PlayerPrefs.GetInt("FirstTutorialEnabled") == 1){
+            if(PlayerPrefs.GetInt("FirstTutorialEnabled") == 0){
                 firstHelpPanel.SetActive(true);
             }else{
                 firstHelpPanel.SetActive(false);
@@ -36,10 +35,10 @@ public class FirstTutorial : MonoBehaviour
     }
 
     public void EnableTutorial(){
-        PlayerPrefs.SetInt("FirstTutorialEnabled", 1);
+        PlayerPrefs.SetInt("FirstTutorialEnabled", 0);
     }
 
     public void DisableTutorial(){
-        PlayerPrefs.SetInt("FirstTutorialEnabled", 0);
+        PlayerPrefs.SetInt("FirstTutorialEnabled", 1);
     }
 }
